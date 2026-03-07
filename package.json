@@ -1,8 +1,8 @@
 {
-  "name": "@shennmine/libsignal-node",
-  "version": "2.2.6",
+  "name": "amelMD/libsignal",
+  "version": "2.2.7",
   "description": "Open Whisper Systems' libsignal for Node.js",
-  "repository": "shennmine/libsignal-node",
+  "repository": "amelMD/libsignal",
   "main": "index.js",
   "keywords": [
     "signal",
