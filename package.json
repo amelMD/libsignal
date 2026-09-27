@@ -1,28 +1,48 @@
 {
-  "name": "amelMD/libsignal",
-  "version": "2.2.7",
-  "description": "Open Whisper Systems' libsignal for Node.js",
-  "repository": "amelMD/libsignal",
+  "name": "@amelMD/libsignal",
+  "version": "1.0.0",
+  "description": "Modernized fork of WhiskeySockets/libsignal-node for @amelMD/baileys — zero-breaking-change audit and maintenance update fork from aka",
+  "homepage": "https://github.com/akaanakbaik/libsignal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amelMD/libsignal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amelMD/libsignal/issues"
+  },
   "main": "index.js",
+  "types": "index.d.ts",
   "keywords": [
     "signal",
     "whispersystems",
-    "crypto"
+    "crypto",
+    "whatsapp",
+    "baileys"
   ],
   "license": "GPL-3.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "curve25519-js": "^0.0.4",
-    "crypto": "^1.0.1",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "protobufjs": "6.8.8"
+    "protobufjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
   },
   "files": [
-    "install.js",
     "index.js",
+    "index.d.ts",
     "src/*"
   ],
-  "devDependencies": {
-    "eslint": "6.0.1"
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint src/ --ext .js",
+    "test": "node --test test/*.test.js",
+    "test:log": "node --test --test-reporter=spec test/*.test.js",
+    "test:coverage": "node --experimental-test-coverage --test test/*.test.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
